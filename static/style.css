@@ -1,0 +1,95 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ensures full height */
+  padding: 20px; /* avoids edges on small screens */
+}
+
+/* Main card container */
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Headings */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Inputs and selects */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Result box */
+.result {
+  margin-top: 20px;
+  background-color: #e8f5e9;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #222;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 20px;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+  }
+}

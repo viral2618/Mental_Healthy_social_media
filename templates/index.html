@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📱 Social Media Impact Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>📊 Predict Happiness Based on Digital Lifestyle</h2>
+    <form action="/predict" method="POST">
+      <input type="number" name="Age" placeholder="Age" required>
+      
+      <select name="Gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Other">Other</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <input type="number" name="Daily_Screen_Time" step="0.1" placeholder="Daily Screen Time (hrs)" required>
+      <input type="number" name="Sleep_Quality" step="0.1" placeholder="Sleep Quality (1-10)" required>
+      <input type="number" name="Stress_Level" step="0.1" placeholder="Stress Level (1-10)" required>
+      <input type="number" name="Days_Without_Social_Media" placeholder="Days Without Social Media" required>
+      <input type="number" name="Exercise_Frequency" placeholder="Exercise Frequency (per week)" required>
+     
+
+      <select name="Social_Media_Platform" required>
+        <option value="">Select Main Platform</option>
+        <option value="Instagram">Instagram</option>
+        <option value="LinkedIn">LinkedIn</option>
+        <option value="TikTok">TikTok</option>
+        <option value="Twitter">Twitter (X)</option>
+        <option value="YouTube">YouTube</option>
+      </select>
+
+      <input type="number" name="Total_Social_Media_Use" step="0.1" placeholder="Total Social Media Use (hrs)" required>
+
+      <select name="Is_Active_User" required>
+        <option value="">Active User?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <input type="number" name="Work_Life_Balance_Score" step="0.1" placeholder="Work Life Balance Score" required>
+      <input type="number" name="Rest_to_Screen_Ratio" step="0.01" placeholder="Rest to Screen Ratio" required>
+      <input type="number" name="Screen_Stress_Interaction" step="0.01" placeholder="Screen Stress Interaction" required>
+      <input type="number" name="Stress_to_Sleep_Ratio" step="0.01" placeholder="Stress to Sleep Ratio" required>
+      <input type="number" name="Screen_to_Exercise_Ratio" step="0.01" placeholder="Screen to Exercise Ratio" required>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+      <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>
